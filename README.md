@@ -12,3 +12,6 @@ Required software:
 - Python
   * [pySecDec](https://secdec.readthedocs.io/en/stable/)
   * [Jupyter](https://jupyter.org/)
+
+In order to use the Mathematica files, you need to replace the placeholder strings or file paths `"PathToAlibrary"` with your respective path to the directory that contains your copy of _alibrary_, and `"PathToOutputDirectory[i]"` with the path to the directories you want the output `compile.py` files to be written to. For single Higgs, the placeholder string does not contain the `"[i]"` at the end, and in the case of double Higgs, this represents both output paths.
+You also need to add the model file provided here to your _alibrary_ directory, or a corresponding model file of your own choice.
