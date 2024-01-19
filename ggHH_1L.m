@@ -24,7 +24,7 @@ Get[$Apath <> "/amodel-qcd-HHH.m"];
  *)
 
 NLOOPS = 1; 
-ggHHsprules = {sp[q1, q1] -> 0, sp[q2, q2] -> 0, sp[q1, q2] -> s12/2, sp[p1, p1] -> -s12/2 + s13/2 + s23/2, sp[q1, p1] -> -s12/4 - s13/4 + s23/4, sp[q2, p1] -> -s12/4 + s13/4 - s23/4};
+ggHHsprules = {sp[q1, q1] -> 0, sp[q2, q2] -> 0, sp[q1, q2] -> s12/2, sp[p1, p1] -> s12/2 + s13/2 + s23/2, sp[q1, p1] -> s12/4 - s13/4 + s23/4, sp[q2, p1] -> s12/4 + s13/4 - s23/4};
 
 (* ## Diagrams
  *
@@ -255,11 +255,11 @@ FailUnless[FreeQ[amplitudesB2, l1]];
  * and we don't want them either in our final expression for our form factors.
  *)
 
-amplitudesB1 = amplitudesB1 //. Union[ggHHsprules, {mH2 -> (-s12 + s13 + s23) / 2, sp[q1 + q2, q1 + q2] -> 2*sp[q1, q2]}];
+amplitudesB1 = amplitudesB1 //. Union[ggHHsprules, {mH2 -> (s12 + s13 + s23) / 2, sp[q1 + q2, q1 + q2] -> 2*sp[q1, q2]}];
 FailUnless[FreeQ[amplitudesB1, sp]];
 FailUnless[FreeQ[amplitudesB1, mH2]];
 
-amplitudesB2 = amplitudesB2 //. Union[ggHHsprules, {mH2 -> (-s12 + s13 + s23) / 2, sp[q1 + q2, q1 + q2] -> 2*sp[q1, q2]}];
+amplitudesB2 = amplitudesB2 //. Union[ggHHsprules, {mH2 -> (s12 + s13 + s23) / 2, sp[q1 + q2, q1 + q2] -> 2*sp[q1, q2]}];
 FailUnless[FreeQ[amplitudesB2, sp]];
 FailUnless[FreeQ[amplitudesB2, mH2]];
 
