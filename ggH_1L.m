@@ -17,7 +17,7 @@ $HistoryLength = 2;*)
 (* Load *alibrary* and the [[QCD Feynman rules]] from `amodel-qcd-HHH.m`.
  *)
 
-Get["/users/tp/jasons/Downloads/alibrary/alibrary.m"];
+Get["PathToAlibrary"];
 Get[$Apath <> "/amodel-qcd-HHH.m"];
 
 (* Define the number of loops and the kinematics
@@ -275,5 +275,5 @@ Print["Master integrals: ", masters // Length];
 
 basesWithoutMt2 = bases//Map[(Append[#,<|"invariants"->DeleteCases[#["invariants"],mt2]|>]&)/*Map[ReplaceAll[mt2->1]]];
 
-SecDecPrepareSum["/users/tp/jasons/Documents/Scripts/ggH_1L_alib", basesWithoutMt2, fullAmplitudeByPrefactor//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
+SecDecPrepareSum["PathToOutputDirectory", basesWithoutMt2, fullAmplitudeByPrefactor//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
 Print["--- Done ---"];
