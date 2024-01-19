@@ -329,8 +329,8 @@ Print["Master integrals: ", masters2 // Length];
 bases1WithoutMt2 = bases1 // Map[(Append[#,<|"invariants"->DeleteCases[#["invariants"],mt2]|>]&)/*Map[ReplaceAll[mt2->1]]];
 bases2WithoutMt2 = bases2 // Map[(Append[#,<|"invariants"->DeleteCases[#["invariants"],mt2]|>]&)/*Map[ReplaceAll[mt2->1]]];
 
-SecDecPrepareSum["PathToOutputDirectory", bases1WithoutMt2, fullAmplitudeByPrefactor1//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
+SecDecPrepareSum["PathToOutputDirectory1", bases1WithoutMt2, fullAmplitudeByPrefactor1//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
 Print["--- Done ---"];
 
-SecDecPrepareSum["/users/tp/jasons/Documents/Scripts/ggHH_1L_F2", bases2WithoutMt2, fullAmplitudeByPrefactor2//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
+SecDecPrepareSum["PathToOutputDirectory2", bases2WithoutMt2, fullAmplitudeByPrefactor2//KeyMap[InputForm/*ToString]//Map[ReplaceAll[d->4-2*eps]],Order->0];
 Print["--- Done ---"];
