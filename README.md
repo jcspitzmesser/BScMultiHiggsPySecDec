@@ -1,5 +1,5 @@
 # BScMultiHiggsPySecDec
-Generation of the amplitude form factors of single and double Higgs production in gluon fusion with Mathematica, and subsequent numerical evaluation of these form facctors using pySecDec.
+Generation of the amplitude form factors of single and double Higgs production in gluon fusion with Mathematica, and subsequent numerical evaluation of these form factors using pySecDec.
 
 Required software:
 - Wolfram Mathematica
